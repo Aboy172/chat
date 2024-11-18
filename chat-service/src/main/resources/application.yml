@@ -1,0 +1,24 @@
+spring:
+  application:
+    name: chat-service
+  profiles:
+    active: dev
+
+server:
+  port: 6888
+
+mybatis-plus:
+  global-config:
+    db-config:
+      id-type: AUTO
+  configuration:
+    map-underscore-to-camel-case: true
+    log-impl: org.apache.ibatis.logging.stdout.StdOutImpl
+
+jwt:
+  accessToken:
+    expireIn: 1800
+    secret: f7krYTi1EN
+  refreshToken:
+    expireIn: 604800
+    secret: WiwgeGmdI7
